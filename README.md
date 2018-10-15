@@ -124,10 +124,13 @@ var b = 0
 ```
 
 **What might these lines do?**
+They store information under each declared variable e.g. variable r = colour code 255
 
 **What happens if you change the numbers?**
+Changes the colour code assigned to the variable. It calls the background function, which uses the varaibles as parameters
 
 **What numbers are allowed / What numbers have an effect?**
+0-255
 
 Look at this line:
 
@@ -136,15 +139,20 @@ createCanvas(400, 400)
 ```
 
 **What does createCanvas do?**
+Creates a square with a pixel dimension of 400x400
 
 **What happens if you change the numbers?**
+Changes the size and shape of the square
 
 **What numbers are allowed/what numbers have an effect?**
+Only positive numbers
 
 **What happens if you add/remove a number?**
+The parameters width and height are required when declaring the createCanvas variable. If one of those parameters are to be removed, a default canvas is created 100px by 100px - but doesn't allow colour. 
 
 **Can you guess what the `function setup() {` part does? What happens if you
 change the name of setup?**
+The setup function is predefined in the P5 library and allows the browser to execute the functions stored within that library.
 
 Look at this line:
 
@@ -153,13 +161,18 @@ background(r, g, b)
 ```
 
 **What does background do?**
+The background function takes the parameters (numbers) and sets the background colour for the shape we created with createCanvas function. Parameters are numbers between 0-255, we store them in r, g and b variables
 
 **What happens if you change the order of the letters in background? What does
 this tell you about how the computer uses them?**
 
+It would change the colour of the shape. Function 'background' takes 3 parameters in the order: red, green and blue.
+
 **What happens if you change the number of letters?**
+It only retrieves information from the three parameters r, g and b. If anything else is declared it'll be ignored and an error/bug may occur 
 
 **What happens if you change the letters for different ones?**
+The funtion wont be called and an error will occur. We must decalre the new variables to allow it to work.
 
 # Sketch B
 
