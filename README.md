@@ -163,16 +163,14 @@ background(r, g, b)
 **What does background do?**
 The background function takes the parameters (numbers) and sets the background colour for the shape we created with createCanvas function. Parameters are numbers between 0-255, we store them in r, g and b variables
 
-**What happens if you change the order of the letters in background? What does
-this tell you about how the computer uses them?**
-
+**What happens if you change the order of the letters in background? What does this tell you about how the computer uses them?**
 It would change the colour of the shape. Function 'background' takes 3 parameters in the order: red, green and blue.
 
 **What happens if you change the number of letters?**
 It only retrieves information from the three parameters r, g and b. If anything else is declared it'll be ignored and an error/bug may occur 
 
 **What happens if you change the letters for different ones?**
-The funtion wont be called and an error will occur. We must decalre the new variables to allow it to work.
+The function wont be called and an error will occur. We must declare the new variables to allow it to work.
 
 # Sketch B
 
@@ -196,11 +194,13 @@ function setup() {
 ```
 
 **What does setup do?**
+The setup function retrieves information from the project files and declares the canvas size and the background colour of the canvas
 
 **What do `{` `}` mean? What happens if you remove one?**
+The { brackets limit the function. Removing one will not allow the code to be executed.
 
-**What do the numbers in `background(0, 0, 0)` do? What happens when you change
-them? How is this different from Sketch A?**
+**What do the numbers in `background(0, 0, 0)` do? What happens when you change them? How is this different from Sketch A?**
+The numbers declare the intensity of the rgb colours that will be applied to the canvas area. When the numbers are changed, the colour of the background changes as well. It's different from sketch A because in Sketch A, the variables were declared, allowing for us to assign the variables to 
 
 Now look at these lines:
 
@@ -212,6 +212,7 @@ function draw() {
 ```
 
 **What does draw do?**
+The draw function takes the information from the fill and ellipse variables. These variables produce a result of a 30x30 circles to be created in accordance with the position of the mouse. The circles are filled with the colour declared in the fill variable. 
 
 Now look at:
 
@@ -220,11 +221,15 @@ fill(255, 0, 0)
 ```
 
 **What do these numbers do? What happens when you change them?**
+These numbers are rgb colour variables and inform the program to produce a particular colours based on the set parameters.
 
 **What does fill mean? What happens if you change it to stroke?**
+The fill variable infroms the program to fill the ellipses with the rgb colour 255, 0, 0.
+If it is changed to a stroke variable then only the outline will change colour.
 
-**What happens if you remove (or comment out) this line? What about if you
-include both fill and stroke on seperate lines?**
+**What happens if you remove (or comment out) this line? What about if you include both fill and stroke on seperate lines?**
+The fill colour is restored to a default colour (white)
+
 
 Now look at this line:
 
@@ -233,16 +238,21 @@ ellipse(mouseX, mouseY, 30, 30)
 ```
 
 **What does `ellipse` do?**
+It instructs the program to produce a circle. The shape and size of the circle is determined by the dimensions you assign to it. E.g. 
 
 **What happens if you change the numbers?**
+The size of the ellipses produce changes in accordance with the size of the numbers
 
 **What do `mouseX` and `mouseY` mean?**
+These are declared variables that track the position of the mouse along x and y axis. 
 
 **What happens if you change the order of the items between the `(` `)`?**
-
+Not sure 
 ---
 
 **What happens if you add `background(0)` after `draw() {`? Why?**
+The program no longer fills the background of the canvas, meaning that the canvas can no longer be seen.
+
 
 Replace the ellipse with a triangle. Use https://p5js.org/reference/ (the 2D
 primitives section) to help.
@@ -268,16 +278,23 @@ if (mouseIsPressed) {
 ```
 
 **What does `mouseIsPressed` mean?**
+The mouseIsPressed variable creates the instruction for the program to fill the ellipse with rgb(255, 0, 0) when the mouse is pressed. An if/else statement is used, meaning that when the mouse isn't pressed, the ellipse is filled with
+rgb(0, 255, 0).
 
 **What happens if you change `mouseIsPressed` to `keyIsPressed`?** You’ll need
 to click on the sketch so it registers keyboard events – use the ctrl key if you
 have issues with the keyboard.
 
+The mouseIsPressed doesn't contain any information of the function, so nothing changes.
+
 **What does if / else do?**
+An if/else statement is used to determine whether an action should be taken, based on whether or not of the statement is true. The else part of the if/else statement creates an exception to the if statement, allowing for new actions to commence if the original statement is false. 
 
 **What happens if you remove the { } or ( )? Why?**
+The program fails to display the desired output because it creates an error within the code.
 
 **What happens if you change 255 to mouseX ? Why?**
+The ellipse's shape changes shape. This is because I don't know.
 
 **Remove the outline of the circle. Use Google and the P5.js reference to help
 you.**
